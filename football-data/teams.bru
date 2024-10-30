@@ -1,0 +1,15 @@
+meta {
+  name: teams
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://api.football-data.org/v4/teams
+  body: none
+  auth: none
+}
+
+headers {
+  X-Auth-Token: {{process.env.fdata_auth_token}}
+}

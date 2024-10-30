@@ -1,0 +1,15 @@
+meta {
+  name: competition
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://api.football-data.org/v4/competitions/2013
+  body: none
+  auth: none
+}
+
+headers {
+  X-Auth-Token: {{process.env.fdata_auth_token}}
+}

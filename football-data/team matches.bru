@@ -1,0 +1,21 @@
+meta {
+  name: team matches
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://api.football-data.org/v4/teams/3984/matches?competitions=2013&season=2024&status=SCHEDULED
+  body: none
+  auth: none
+}
+
+params:query {
+  competitions: 2013
+  season: 2024
+  status: SCHEDULED
+}
+
+headers {
+  X-Auth-Token: {{process.env.fdata_auth_token}}
+}
