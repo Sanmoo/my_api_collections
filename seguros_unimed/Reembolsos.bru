@@ -1,0 +1,19 @@
+meta {
+  name: Reembolsos
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://api.segurosunimed.com.br/b2c-digital/b2c-bff/saude-reembolso/consultar
+  body: none
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: {{process.env.unimed_api_key}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

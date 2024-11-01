@@ -1,0 +1,27 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://api.segurosunimed.com.br/b2c-digital/b2c-bff/usuario/v2/login
+  body: json
+  auth: none
+}
+
+headers {
+  X-Api-Key: {{process.env.unimed_api_key}}
+}
+
+body:json {
+  {
+    "aplicacaoOrigem": "PORTAL_PF",
+    "usuario": "{{process.env.unimed_username}}",
+    "senha": "{{process.env.unimed_password}}"
+  }
+}
+
+script:post-response {
+  bru.setVar("access_token",res.body.resultado.accessToken);
+}

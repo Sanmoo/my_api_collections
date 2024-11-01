@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "seguros_unimed",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

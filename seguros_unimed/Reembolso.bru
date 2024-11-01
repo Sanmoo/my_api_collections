@@ -1,0 +1,19 @@
+meta {
+  name: Reembolso
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.segurosunimed.com.br/b2c-digital/b2c-bff/saude-reembolso/detalhar/888391355
+  body: none
+  auth: bearer
+}
+
+headers {
+  X-Api-Key: {{process.env.unimed_api_key}}
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
