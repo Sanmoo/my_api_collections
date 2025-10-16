@@ -1,0 +1,15 @@
+meta {
+  name: Fetch Loan
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8090/api/fetch?mobileNumber=1234567890
+  body: none
+  auth: none
+}
+
+params:query {
+  mobileNumber: 1234567890
+}

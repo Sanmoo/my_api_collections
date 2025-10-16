@@ -1,0 +1,23 @@
+meta {
+  name: Fetch Account
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8080/api/fetch?mobileNumber=4354437687
+  body: json
+  auth: none
+}
+
+params:query {
+  mobileNumber: 4354437687
+}
+
+body:json {
+  {
+    "name": "Madan Reddy",
+    "email": "tutor@eazybytes.com",
+    "mobileNumber": "4354437687"
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Create Account
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Madan Reddy",
+    "email": "tutor@eazybytes.com",
+    "mobileNumber": "4354437687"
+  }
+}

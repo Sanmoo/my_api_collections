@@ -1,0 +1,22 @@
+meta {
+  name: Updates Card
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:9000/api/update
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "mobileNumber": "1234567890",
+    "cardNumber": "100517559712",
+    "cardType": "bla",
+    "totalLimit": 100,
+    "amountUsed": 50,
+    "availableAmount": 100
+  }
+}

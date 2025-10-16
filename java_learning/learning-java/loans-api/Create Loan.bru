@@ -1,0 +1,15 @@
+meta {
+  name: Create Loan
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8090/api/create?mobileNumber=1234567890
+  body: none
+  auth: none
+}
+
+params:query {
+  mobileNumber: 1234567890
+}

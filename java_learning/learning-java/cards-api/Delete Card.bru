@@ -1,0 +1,15 @@
+meta {
+  name: Delete Card
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:9000/api/delete?mobileNumber=1234567890
+  body: none
+  auth: none
+}
+
+params:query {
+  mobileNumber: 1234567890
+}

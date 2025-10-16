@@ -1,0 +1,26 @@
+meta {
+  name: Delete Loan
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8090/api/delete?mobileNumber=1234567890
+  body: json
+  auth: none
+}
+
+params:query {
+  mobileNumber: 1234567890
+}
+
+body:json {
+  {
+    "mobileNumber": "1234567890",
+    "loanNumber": "100743885123",
+    "loanType": "bla",
+    "totalLoan": 100,
+    "amountPait": 50,
+    "outstandingAmount": 100
+  }
+}
