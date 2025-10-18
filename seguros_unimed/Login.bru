@@ -11,14 +11,14 @@ post {
 }
 
 headers {
-  X-Api-Key: {{process.env.unimed_api_key}}
+  X-Api-Key: {{api_key}}
 }
 
 body:json {
   {
     "aplicacaoOrigem": "PORTAL_PF",
-    "usuario": "{{process.env.unimed_username}}",
-    "senha": "{{process.env.unimed_password}}"
+    "usuario": "sanmoo.cs@gmail.com",
+    "senha": "{{user_pass}}"
   }
 }
 
